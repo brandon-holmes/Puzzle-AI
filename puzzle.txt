@@ -1,0 +1,83 @@
+Brandon Holmes, Section 2, 500751878
+Nya Samahan, Section 2, 500634913
+Rafael Natividad, Section 3, 500705909
+
+/* PURE GENERATE AND TEST (puzzle1.pl) */
+
+-Submitting Query-
+
+?- solve(L).
+L = [9, 0, 5, 1, 2, 8, 6]
+Yes (0.47s cpu, solution 1, maybe more)
+No (0.53s cpu)
+
+?- print_solution(List).
+Yes (0.42s cpu, solution 1, maybe more)
+No (0.52s cpu)
+
+puzzle1.pl compiled 7972 bytes in 0.00 seconds
+   905
+*   12
+ ______
+  1810
++ 905
+ ______
+ 10860
+
+-Submitting Query w/Computer Time-
+
+?- X is cputime, solve(L), Y is cputime, Z is Y - X.
+X = 1.453
+L = [9, 0, 5, 1, 2, 8, 6]
+Y = 1.921
+Z = 0.46799999999999997
+Yes (0.47s cpu, solution 1, maybe more)
+No (0.53s cpu)
+
+?- X is cputime, print_solution(List), Y is cputime, Z is Y - X.
+X = 2.015
+Y = 2.468
+Z = 0.45299999999999985
+Yes (0.45s cpu, solution 1, maybe more)
+No (0.55s cpu)
+
+   905
+*   12
+ ______
+  1810
++ 905
+ ______
+ 10860
+
+/* SMART INTERLEAVING OF GENERATE AND TEST APPROACH (puzzle2.pl) */
+
+-Submitting Query-
+
+?- print_solution(List).
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+   905
+*   12
+ ______
+  1810
++ 905
+ ______
+ 10860
+
+-Submitting Query w/Computer Time-
+
+?- X is cputime, print_solution(List), Y is cputime, Z is Y - X.
+X = 1.437
+Y = 1.437
+Z = 0.0
+Yes (0.00s cpu, solution 1, maybe more)
+No (0.00s cpu)
+
+   905
+*   12
+ ______
+  1810
++ 905
+ ______
+ 10860
